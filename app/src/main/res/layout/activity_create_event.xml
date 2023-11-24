@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateEventActivity"
+    android:orientation="vertical"
+    android:background="@color/app_bg">
+
+<!--    title-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Event Information"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        />
+
+<!--    form part -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:layout_margin="10dp"
+        android:padding="12dp"
+        >
+
+        <TableRow>
+            <TextView
+                android:text="Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Place"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/etPlace"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Type"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/radioIndoor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Indoor"
+                    android:textStyle="bold"
+                    />
+                <RadioButton
+                    android:id="@+id/radioOutdoor"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Outdoor"
+                    android:textStyle="bold"
+                    />
+                <RadioButton
+                    android:id="@+id/radioOnline"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Online"
+                    android:textStyle="bold"
+                    />
+            </RadioGroup>
+
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Date &amp; Time"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="yyyy-MM-dd HH:mm"
+                android:inputType="text" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Capacity"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/etCapacity"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Budget"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/etBudget"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="numberDecimal"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Email"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Phone"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="phone"
+                />
+        </TableRow>
+
+        <TableRow
+            >
+            <TextView
+                android:text="Description"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/etDsc"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                />
+        </TableRow>
+
+        <TableRow
+            >
+            <TextView
+                android:text="Remind Me"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/etRemind"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:hint="before (min)"
+                />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/errorTv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+    </TableLayout>
+
+
+<!--    bottom panel-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Share"
+            android:backgroundTint="@color/light_blue"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"/>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Save"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"/>
+
+<!--        <TextView-->
+<!--            android:clickable="true"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Cancel"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:clickable="true"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Share"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            />-->
+
+<!--        <TextView-->
+<!--            android:clickable="true"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Save"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="20sp"-->
+<!--            />-->
+
+    </LinearLayout>
+
+</LinearLayout>

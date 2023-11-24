@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Sign Up"
+        android:gravity="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="15dp"
+        >
+
+        <TableRow
+            android:id="@+id/rowName">
+            <TextView
+                android:text="Name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/suName"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowEmail">
+            <TextView
+                android:text="Email"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/suEmail"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="textEmailAddress"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowPhone">
+            <TextView
+                android:text="Phone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/suPhone"
+                android:hint="+880123456789"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="phone"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="User ID"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/suUser"
+                android:hint="Alphabets and number only"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Password"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/suPass"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="textPassword"
+                android:hint="at least 8 char"
+                />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/rowRePass">
+            <TextView
+                android:text="Re-password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/suConPass"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="textPassword"
+                android:hint="at least 8 char"
+                />
+        </TableRow>
+
+        <CheckBox
+            android:id="@+id/chUser"
+            android:text="Remember User ID"/>
+
+        <CheckBox
+            android:id="@+id/chPass"
+            android:text="Remember Password"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have account?"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/loginRedirect"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="#0D47A1"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/exitBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Exit"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:id="@+id/goBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Go"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"/>
+    </LinearLayout>
+</LinearLayout>

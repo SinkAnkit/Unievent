@@ -1,0 +1,88 @@
+                String err = "";
+
+                // input field check
+                if(!name.isEmpty() && !place.isEmpty() && !date.isEmpty() && !capacity.isEmpty() && !budget.isEmpty() && !email.isEmpty() && !phone.isEmpty() && !desc.isEmpty()){
+                    //name
+                    if(name.length() < 4 || name.length() > 12 || !name.matches("[a-zA-Z]+")){
+                        err += "Invalid Name\n";
+                    }
+
+                    //place
+                    if(place.length() >= 6 && place.length() <= 64 || !place.matches("[a-zA-Z0-9]+")){
+                        err += "Invalid Place\n";
+                    }
+
+                    // radio button check
+                    boolean isIndoor = rIndoor.isChecked();
+                    boolean isOutdoor = rOutdoor.isChecked();
+                    boolean isOnline = rOnline.isChecked();
+
+                    if(!isIndoor || !isOutdoor || !isOnline){
+                        err += "Please select event type\n";
+                    }
+
+                    // converting string to Integer
+                    int cap;
+                    double event_budget;
+
+                    cap = Integer.parseInt(capacity);
+                    event_budget = Double.parseDouble(budget);
+
+                    if(cap <= 0){
+                        err += "Invalid capacity\n";
+                    }
+
+                    if(event_budget > 1000.00){
+                        err += "Invalid budget\n";
+                    }
+
+                    // Date and time checking
+                    String format = "YYYY-mm-dd HH:mm";
+                    Date checkDate = null;
+                    try {
+                        SimpleDateFormat sdf = new SimpleDateFormat(format);
+                        checkDate = sdf.parse(date);
+                        if (!date.equals(sdf.format(checkDate))) {
+                            checkDate = null;
+                        }
+                    } catch (ParseException ex) {
+                        ex.printStackTrace();
+                    }
+                    if (checkDate == null) {
+                        // Invalid date format
+                        err += "Invalid date format\n";
+                    }
+
+                    //email
+                    String EMAIL_REGEX = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+                    if(!email.matches(EMAIL_REGEX)){
+                        err += "Invalid email format\n";
+                    }
+
+                    //phone
+                    Pattern p = Pattern.compile("^\\+\\d{13}$");
+                    Matcher m = p.matcher(phone);
+                    if(!m.matches()){
+                        err += "Invalid phone number\n";
+                    }
+
+                    //description
+                    if(desc.length() >= 10 && desc.length() < 1000){
+                        err += "Invalid description format\n";
+                    }
+
+                    err = "";
+                }
+                else{
+                    err += "please fill all the fields";
+                }
+
+                if(err.length() > 0){
+                    showErrorDialog(err);
+                }
+
+                // error text show
+                if(!err.isEmpty()){
+                    errorTv.setText(err);
+                    return;
+                }
